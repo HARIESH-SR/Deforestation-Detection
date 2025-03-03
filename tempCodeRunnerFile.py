@@ -6,12 +6,8 @@ import base64
 app = Flask(__name__)
 
 @app.route('/')
-def frontpage():
-    return render_template("frontpage.html")  # Load frontpage first
-
-@app.route('/detect')
 def index():
-    return render_template("index.html")  # Redirect here when 'Start Detection' is clicked
+    return render_template("index.html")
 
 @app.route('/detect', methods=['POST'])
 def detect_deforestation():
